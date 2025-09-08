@@ -62,7 +62,7 @@ git remote -v
 
 5. Refresh the GitHub page for your repository. You should see this `README.md` file.
 
-### Why are pull requests called "Pull Requests"? (wrong answer)
+### Why are pull requests called "Pull Requests"? (correct answer now)
 
 * Pull Requests are a feature of online git services like Github and Gitlab. 
 They allow anyone to request for changes to be added, even if they don't have access to the 
@@ -100,21 +100,38 @@ git commit -am "Give correct reason to why PRs are named that"
 ```
 
 3. Check on GitHub whether the branch exists there or not. Does it? Why or why not?
-4. You may think it is because you haven't pushed to the branch yet, so go ahead and try to push the branch to the remote repository.
+
+<strong style="color:red"> branch doesn't exist because we haven't created/pushed the 
+new branch on remote. </strong>
+
+4. You may think it is because you haven't pushed to the branch yet, so go ahead and 
+try to push the branch to the remote repository.
 
 ```bash
 git push
 ```
 
-You probably got a similar error to this:
+You probably got a similar error to this: 
+<strong style="color:red">YES </strong>
 
 ```text
 fatal: The current branch fix/pr-definition has no upstream branch
 ```
 
 5. What does this error mean? Why did it happen? Git explains how to fix it by running a command that will:
-   
-   1. Create a new branch on the remote repository with the same name as the local branch (if the remote branch doesn't already exist).
+  
+<strong style="color:red"> This error means that there is no tracking/named branch on remote repository.
+This fix/pr-definition branch will not be merged with the main branch on remote. To merge it on main we have t
+to define it within push command like  
+<p style="color:blue"> git push origin main</p>
+But this is not the desirable action. It is going to kill the concept and use of branching
+</strong>
+
+
+  ~~1. Create a new branch on the remote repository with the same name as the local branch 
+   (if the remote branch doesn't already exist).~~
+   1. You don't have to create a new branch, <strong><i>push -u origin fix/pr-definition</i></strong> 
+      will create and set the track branch
    2. Set the local branch to track the remote branch.
    3. Push the local branch to the remote repository.
    
