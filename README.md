@@ -67,7 +67,7 @@ git remote -v
 * Pull Requests are a feature of online git services like Github and Gitlab. 
 They allow anyone to request for changes to be added, even if they don't have access to the 
 private repository but can fork that private repository.
-
+* Fork is a feature to copy the repository into your remote/local repository
 * Pull Request is asking for pulling changes from one branch to another branch or mainly into
 main/master branch.But those changes need to be reviewed before merging.That's why it is called
 Pull Request (Before Pulling, requesting to pull the changes into another branch)
